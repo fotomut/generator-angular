@@ -1,17 +1,17 @@
 'use strict'
 
-describe 'Controller: <%= _.classify(name) %>Ctrl', () ->
+describe 'Controller: <%= _(name).chain().capitalize().camelize().value() %>Ctrl', () ->
 
   # load the controller's module
   beforeEach module '<%= moduleName %>'
 
-  <%= _.classify(name) %>Ctrl = {}
+  <%= _(name).chain().capitalize().camelize().value() %>Ctrl = {}
   scope = {}
 
   # Initialize the controller and a mock scope
   beforeEach inject ($controller, $rootScope) ->
     scope = $rootScope.$new()
-    <%= _.classify(name) %>Ctrl = $controller '<%= _.classify(name) %>Ctrl', {
+    <%= _(name).chain().capitalize().camelize().value() %>Ctrl = $controller '<%= _(name).chain().capitalize().camelize().value() %>Ctrl', {
       $scope: scope
     }
 
