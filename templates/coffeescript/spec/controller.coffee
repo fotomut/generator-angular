@@ -1,17 +1,17 @@
 'use strict'
 
-describe 'Controller: <%= _(name).chain().capitalize().camelize().value() %>Ctrl', () ->
+describe 'Controller: <%= _(name).chain().camelize().capitalize().value() %>Ctrl', () ->
 
   # load the controller's module
   beforeEach module '<%= moduleName %>'
 
-  <%= _(name).chain().capitalize().camelize().value() %>Ctrl = {}
+  <%= _(name).chain().camelize().capitalize().value() %>Ctrl = {}
   scope = {}
 
   # Initialize the controller and a mock scope
   beforeEach inject ($controller, $rootScope) ->
     scope = $rootScope.$new()
-    <%= _(name).chain().capitalize().camelize().value() %>Ctrl = $controller '<%= _(name).chain().capitalize().camelize().value() %>Ctrl', {
+    <%= _(name).chain().camelize().capitalize().value() %>Ctrl = $controller '<%= _(name).chain().camelize().capitalize().value() %>Ctrl', {
       $scope: scope
     }
 

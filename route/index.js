@@ -27,14 +27,14 @@ Generator.prototype.rewriteAppJs = function () {
     splicable = [
       '.when \'/' + this.name + '\',',
       '  templateUrl: \'' + htmlTemplatePath + '\',',
-      '  controller: \'' + this._(this.name).chain().capitalize().camelize().value() + 'Ctrl\''
+      '  controller: \'' + this._(this.name).chain().camelize().capitalize().value() + 'Ctrl\''
     ];
     filePath += 'coffee';
   } else {
     splicable = [
       '.when(\'/' + this.name + '\', {',
       '  templateUrl: \'' + htmlTemplatePath + '\',',
-      '  controller: \'' + this._(this.name).chain().capitalize().camelize().value() + 'Ctrl\'',
+      '  controller: \'' + this._(this.name).chain().camelize().capitalize().value() + 'Ctrl\'',
       '})'
     ];
     filePath += 'js';
